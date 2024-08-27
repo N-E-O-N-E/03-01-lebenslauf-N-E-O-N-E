@@ -4,7 +4,7 @@ import SwiftUI
 struct Syntax_LebenslaufApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CVView()
         }
     }
 }
