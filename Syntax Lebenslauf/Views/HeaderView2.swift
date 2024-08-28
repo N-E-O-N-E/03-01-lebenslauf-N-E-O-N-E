@@ -13,10 +13,16 @@ struct CVHeaderView2: View {
     var body: some View {
             
         VStack(alignment: .center) {
+            ZStack {
+                Rectangle()
+                    .frame(width: .infinity, height: 100)
+                    .foregroundColor(.green)
+                    .cornerRadius(100)
+                Text("LEBENSLAUF")
+                    .font(.largeTitle).bold()
+                
+            }
             
-            Rectangle()
-                .frame(width: .infinity, height: 100)
-                .foregroundColor(.cyan)
             
             Text("\(cvHeader.pic)")
                 .frame(width: 200, height: 100).colorMultiply(.red)
@@ -33,6 +39,7 @@ struct CVHeaderView2: View {
                 Text("Vorname:")
                     .padding(1)
                 Spacer().frame(width: 50)
+                
                 Text("\(cvHeader.vorname)")
             }
             
