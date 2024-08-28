@@ -9,38 +9,51 @@ import SwiftUI
 
 struct CVHeaderView2: View {
     
-    let cvHeader: CVHeader
+    var cvHeader: CVHeader
     let cvBeruf: [Berufserfahrung]
     let cvAusbild: [Ausbildung]
     
     var body: some View {
+
+        //Color(red: 0.35, green: 0.62, blue: 0.6)
         
-        ZStack {
+        ZStack{
             
-            Image("bg")
+            Image(cvHeader.pic)
             
-            ScrollView {
+            Image("profilbild")
+                .frame(width: 210, height: 210)
+                .overlay(Circle().stroke(Color(.white), lineWidth: 3))
+                .offset(y:65)
                 
-                VStack(alignment: .center) {
-                    
-                    Spacer(minLength: 70)
-                    Image("profilbild")
-                    
-                    Divider()
-                    
-                    Text("\(cvHeader.CVtitel)")
-                        .font(.title).bold()
-                    
-                    Divider()
-                    
-                } .padding(20)
+        }
+        .frame(maxWidth: .infinity, alignment: .top)
+        .padding(.top, -1)
+        .padding(.bottom, -10)
+        .edgesIgnoringSafeArea(.all)
+        
+        
+        Text("\(cvHeader.CVtitel)")
+            .font(.title).bold()
+            .padding(.bottom, 0)
+        
+        Divider()
+            
                 
-                ZStack {
+        ScrollView {
+                
+        
+                
+                
+            ZStack {
                     Text("Persönliche Daten")
                         .font(.title3).bold()
-                    
-                    
-                } .background(Color(red: 0.1, green: 0.2, blue: 0.3).opacity(0.15))
+                        .padding(.horizontal)
+                        
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(Color(red: 0.1, green: 0.2, blue: 0.3).opacity(0.15))
+                
                 
                 
                 
@@ -110,12 +123,30 @@ struct CVHeaderView2: View {
                     
                 }
                 
+                Spacer(minLength: 30)
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 ZStack {
                     Text("Berufserfahrung")
                         .font(.title3).bold()
+                        .padding(.horizontal)
                     
                     
-                } .background(Color(red: 0.1, green: 0.2, blue: 0.3).opacity(0.15))
+                } .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color(red: 0.1, green: 0.2, blue: 0.3).opacity(0.15))
                 
                 
                 VStack(alignment: .leading) {
@@ -125,34 +156,76 @@ struct CVHeaderView2: View {
                     
                     
                     HStack {
-                        Text("Titel:")
+                        Text("Jobtitel:")
                             .padding(1)
-                        Spacer().frame(width: 50)
-                        
+                        Spacer().frame(width: 20)
                         Text("\(cvBeruf[0].titel)")
                     }
                     
                     HStack {
-                        Text("Schule:")
+                        Text("Firma:")
                             .padding(1)
-                        Spacer().frame(width: 36)
+                        Spacer().frame(width: 34)
                         Text("\(cvBeruf[0].ort)")
                     }
                     
                     
                 }
                 
-            } // end Body View
+                Spacer(minLength: 30)
+                
             
-        }
-        
+            
+            
+            
+            
+                
+            
+                ZStack {
+                    Text("Ausbildung")
+                        .font(.title3).bold()
+                        .padding(.horizontal)
+                    
+                    
+                } .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color(red: 0.1, green: 0.2, blue: 0.3).opacity(0.15))
+                
+                
+                VStack(alignment: .leading) {
+                    
+                    // Statt Spacing einfach mal ein Frame mit fixer Breite einsetzen!
+                    // ----------------------------------------------------------------------------
+                    
+                    
+                    HStack {
+                        Text("Abschluss:")
+                            .padding(1)
+                        Spacer().frame(width: 20)
+                        
+                        Text("\(cvAusbild[0].name)")
+                    }
+                    
+                    HStack {
+                        Text("Institut:")
+                            .padding(1)
+                        Spacer().frame(width: 45)
+                        Text("\(cvAusbild[0].ort)")
+                    }
+                    
+                    
+                }
+                
+            }
+          
     }
     
 }
 
+
+
 #Preview {
     CVHeaderView2(
-        cvHeader: CVHeader(pic: "🦹‍♂️",
+        cvHeader: CVHeader(pic: "bg1",
                            CVtitel: "Max Mustermann",
                            headline: "Persönliche Daten",
                            vorname: "Max",
