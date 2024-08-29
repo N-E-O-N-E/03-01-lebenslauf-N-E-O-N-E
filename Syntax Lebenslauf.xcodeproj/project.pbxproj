@@ -12,10 +12,13 @@
 		CE7581172C7D9F7600884A40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7581162C7D9F7600884A40 /* Preview Assets.xcassets */; };
 		FA8A3B952C7F466300DFF815 /* Berufserfahrung.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A3B942C7F466300DFF815 /* Berufserfahrung.swift */; };
 		FA8A3B972C7F494300DFF815 /* Ausbildung.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A3B962C7F494300DFF815 /* Ausbildung.swift */; };
+		FAAFD7B82C80951C00D52FDA /* persDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFD7B72C80951C00D52FDA /* persDataView.swift */; };
+		FAAFD7BA2C8096D600D52FDA /* berufErfahrungView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFD7B92C8096D600D52FDA /* berufErfahrungView.swift */; };
+		FAAFD7BC2C8097D100D52FDA /* ausbildungView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFD7BB2C8097D100D52FDA /* ausbildungView.swift */; };
 		FADC70072C7DDC51009DF471 /* CVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC70062C7DDC51009DF471 /* CVView.swift */; };
 		FADC70092C7DDF4B009DF471 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC70082C7DDF4B009DF471 /* HeaderView.swift */; };
 		FADC700B2C7DE1C3009DF471 /* HeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC700A2C7DE1C3009DF471 /* HeaderModel.swift */; };
-		FADC700F2C7E04DF009DF471 /* HeaderView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC700E2C7E04DF009DF471 /* HeaderView2.swift */; };
+		FADC700F2C7E04DF009DF471 /* HeaderViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC700E2C7E04DF009DF471 /* HeaderViewMain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,10 +28,13 @@
 		CE7581162C7D9F7600884A40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA8A3B942C7F466300DFF815 /* Berufserfahrung.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Berufserfahrung.swift; sourceTree = "<group>"; };
 		FA8A3B962C7F494300DFF815 /* Ausbildung.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ausbildung.swift; sourceTree = "<group>"; };
+		FAAFD7B72C80951C00D52FDA /* persDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = persDataView.swift; sourceTree = "<group>"; };
+		FAAFD7B92C8096D600D52FDA /* berufErfahrungView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = berufErfahrungView.swift; sourceTree = "<group>"; };
+		FAAFD7BB2C8097D100D52FDA /* ausbildungView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ausbildungView.swift; sourceTree = "<group>"; };
 		FADC70062C7DDC51009DF471 /* CVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVView.swift; sourceTree = "<group>"; };
 		FADC70082C7DDF4B009DF471 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		FADC700A2C7DE1C3009DF471 /* HeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderModel.swift; sourceTree = "<group>"; };
-		FADC700E2C7E04DF009DF471 /* HeaderView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView2.swift; sourceTree = "<group>"; };
+		FADC700E2C7E04DF009DF471 /* HeaderViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewMain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				FADC70082C7DDF4B009DF471 /* HeaderView.swift */,
-				FADC700E2C7E04DF009DF471 /* HeaderView2.swift */,
+				FADC700E2C7E04DF009DF471 /* HeaderViewMain.swift */,
+				FAAFD7B72C80951C00D52FDA /* persDataView.swift */,
+				FAAFD7B92C8096D600D52FDA /* berufErfahrungView.swift */,
+				FAAFD7BB2C8097D100D52FDA /* ausbildungView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,8 +179,11 @@
 			files = (
 				FA8A3B972C7F494300DFF815 /* Ausbildung.swift in Sources */,
 				CE7581102C7D9F7500884A40 /* Syntax_LebenslaufApp.swift in Sources */,
-				FADC700F2C7E04DF009DF471 /* HeaderView2.swift in Sources */,
+				FADC700F2C7E04DF009DF471 /* HeaderViewMain.swift in Sources */,
 				FADC70092C7DDF4B009DF471 /* HeaderView.swift in Sources */,
+				FAAFD7BC2C8097D100D52FDA /* ausbildungView.swift in Sources */,
+				FAAFD7B82C80951C00D52FDA /* persDataView.swift in Sources */,
+				FAAFD7BA2C8096D600D52FDA /* berufErfahrungView.swift in Sources */,
 				FADC700B2C7DE1C3009DF471 /* HeaderModel.swift in Sources */,
 				FADC70072C7DDC51009DF471 /* CVView.swift in Sources */,
 				FA8A3B952C7F466300DFF815 /* Berufserfahrung.swift in Sources */,

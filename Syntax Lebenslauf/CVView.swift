@@ -7,6 +7,7 @@
 import SwiftUI
 
 struct CVView: View {
+
     var body: some View {
         
         let pers1 = CVHeader(bg: "bg1",
@@ -42,7 +43,7 @@ struct CVView: View {
                                       ort: "Hochschule Musterstadt",
                                       vonJahr: 2022, bisJahr: 2024)]
         
-        CVHeaderView2(cvHeader: pers1, cvBeruf: erfahrung1, cvAusbild: ausbildung1)
+        HeaderViewMain(cvHeader: pers1, cvBeruf: erfahrung1, cvAusbild: ausbildung1)
         
     } // endBody
 }

@@ -24,5 +24,9 @@ struct CVHeader {
     let telefon: String
     let gebOrt: String
     let familienstand: String
-
+    
+    
+    
 }
+        
+        
