@@ -39,7 +39,7 @@ struct CVView: View {
         let ausbildung1 = [Ausbildung(name: "Master of Science in Wirtschaftsinformatik", 
                                       ort: "Universität Musterstadt",
                                       vonJahr: 2012, bisJahr: 2014),
-                           Ausbildung(name: "Bachelor of Science in Betriebswirtschaftslehre", 
+                           Ausbildung(name: "Bachelor of Science in Betriebswirtschaf", 
                                       ort: "Hochschule Musterstadt",
                                       vonJahr: 2022, bisJahr: 2024)]
         

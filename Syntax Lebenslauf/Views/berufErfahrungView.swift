@@ -25,78 +25,32 @@ struct berufErfahrungView: View {
         .background(Color(red: 0.2, green: 0.6, blue: 0.5).opacity(0.2))
         
         
-    // Berufserfahrung
-    Group {
-        
-        HStack(alignment: .top) {
-            Text("\(String(cvBeruf[0].vonJahr)) - \(String(cvBeruf[0].bisJahr))")
-                .frame(width: 110, alignment: .trailing)
-                .padding(1)
+        ForEach(cvBeruf, id: \.id) { inhalt in
+           
+            Text("\(inhalt.titel)")
+                .frame(width: 350, height: 20, alignment: .leading)
+                .bold()
             
-            VStack {
-                Text("\(cvBeruf[0].titel)")
-                    .frame(width: 260, alignment: .leading)
-                    .padding(1)
-                    .bold()
-                Text("\(cvBeruf[0].ort)")
-                    .frame(width: 260, alignment: .leading)
-                    .padding(1)
-                    .italic()
+            HStack {
+                
+                VStack {
+                    Text("\(String(inhalt.vonJahr)) - \(String(inhalt.bisJahr))")
+                        .frame(width: 100, height: .infinity, alignment: .leading)
+                        .padding(.leading, 10.0)
+                        .padding(0)
+                }
+                
+                VStack {
+                    
+                    Text("\(inhalt.ort)")
+                        .frame(width: 250, height: .infinity, alignment: .leading)
+                        .italic()
+                }
+                
             }
-        }
-        
-        HStack(alignment: .top) {
-            Text("\(String(cvBeruf[1].vonJahr)) - \(String(cvBeruf[1].bisJahr))")
-                .frame(width: 110, alignment: .trailing)
-                .padding(1)
             
-            VStack {
-                Text("\(cvBeruf[1].titel)")
-                    .frame(width: 260, alignment: .leading)
-                    .padding(1)
-                    .bold()
-                Text("\(cvBeruf[1].ort)")
-                    .frame(width: 260, alignment: .leading)
-                    .padding(1)
-                    .italic()
-            }
-        }
+        } //endforEach
         
-        HStack(alignment: .top) {
-            Text("\(String(cvBeruf[2].vonJahr)) - \(String(cvBeruf[2].bisJahr))")
-                .frame(width: 110, alignment: .trailing)
-                .padding(1)
-            
-            VStack {
-                Text("\(cvBeruf[2].titel)")
-                    .frame(width: 260, alignment: .leading)
-                    .padding(1)
-                    .bold()
-                Text("\(cvBeruf[2].ort)")
-                    .frame(width: 260, alignment: .leading)
-                    .padding(1)
-                    .italic()
-            }
-        }
-        
-        HStack(alignment: .top) {
-            Text("\(String(cvBeruf[3].vonJahr)) - \(String(cvBeruf[3].bisJahr))")
-                .frame(width: 110, alignment: .trailing)
-                .padding(1)
-            
-            VStack {
-                Text("\(cvBeruf[3].titel)")
-                    .frame(width: 260, alignment: .leading)
-                    .padding(1)
-                    .bold()
-                Text("\(cvBeruf[3].ort)")
-                    .frame(width: 260, alignment: .leading)
-                    .padding(1)
-                    .italic()
-            }
-        }
-        
-    }
 
     
 Spacer(minLength: 30)

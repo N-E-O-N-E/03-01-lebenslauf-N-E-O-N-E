@@ -9,6 +9,7 @@ import Foundation
 
 struct Ausbildung {
     
+    var id = UUID()
     var name: String
     var ort: String
     var vonJahr: Int

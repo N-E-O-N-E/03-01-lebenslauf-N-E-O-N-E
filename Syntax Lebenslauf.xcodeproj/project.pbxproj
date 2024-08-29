@@ -15,6 +15,8 @@
 		FAAFD7B82C80951C00D52FDA /* persDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFD7B72C80951C00D52FDA /* persDataView.swift */; };
 		FAAFD7BA2C8096D600D52FDA /* berufErfahrungView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFD7B92C8096D600D52FDA /* berufErfahrungView.swift */; };
 		FAAFD7BC2C8097D100D52FDA /* ausbildungView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFD7BB2C8097D100D52FDA /* ausbildungView.swift */; };
+		FAAFD7BE2C80A5FD00D52FDA /* headView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFD7BD2C80A5FD00D52FDA /* headView.swift */; };
+		FAAFD7C02C80A8EA00D52FDA /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFD7BF2C80A8EA00D52FDA /* extensions.swift */; };
 		FADC70072C7DDC51009DF471 /* CVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC70062C7DDC51009DF471 /* CVView.swift */; };
 		FADC70092C7DDF4B009DF471 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC70082C7DDF4B009DF471 /* HeaderView.swift */; };
 		FADC700B2C7DE1C3009DF471 /* HeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC700A2C7DE1C3009DF471 /* HeaderModel.swift */; };
@@ -31,6 +33,8 @@
 		FAAFD7B72C80951C00D52FDA /* persDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = persDataView.swift; sourceTree = "<group>"; };
 		FAAFD7B92C8096D600D52FDA /* berufErfahrungView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = berufErfahrungView.swift; sourceTree = "<group>"; };
 		FAAFD7BB2C8097D100D52FDA /* ausbildungView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ausbildungView.swift; sourceTree = "<group>"; };
+		FAAFD7BD2C80A5FD00D52FDA /* headView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headView.swift; sourceTree = "<group>"; };
+		FAAFD7BF2C80A8EA00D52FDA /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		FADC70062C7DDC51009DF471 /* CVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVView.swift; sourceTree = "<group>"; };
 		FADC70082C7DDF4B009DF471 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		FADC700A2C7DE1C3009DF471 /* HeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderModel.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 				FADC70042C7DDBC6009DF471 /* Models */,
 				FADC70062C7DDC51009DF471 /* CVView.swift */,
 				CE75810F2C7D9F7500884A40 /* Syntax_LebenslaufApp.swift */,
+				FAAFD7BF2C80A8EA00D52FDA /* extensions.swift */,
 				CE7581132C7D9F7600884A40 /* Assets.xcassets */,
 				CE7581152C7D9F7600884A40 /* Preview Content */,
 			);
@@ -100,6 +105,7 @@
 			children = (
 				FADC70082C7DDF4B009DF471 /* HeaderView.swift */,
 				FADC700E2C7E04DF009DF471 /* HeaderViewMain.swift */,
+				FAAFD7BD2C80A5FD00D52FDA /* headView.swift */,
 				FAAFD7B72C80951C00D52FDA /* persDataView.swift */,
 				FAAFD7B92C8096D600D52FDA /* berufErfahrungView.swift */,
 				FAAFD7BB2C8097D100D52FDA /* ausbildungView.swift */,
@@ -180,6 +186,7 @@
 				FA8A3B972C7F494300DFF815 /* Ausbildung.swift in Sources */,
 				CE7581102C7D9F7500884A40 /* Syntax_LebenslaufApp.swift in Sources */,
 				FADC700F2C7E04DF009DF471 /* HeaderViewMain.swift in Sources */,
+				FAAFD7BE2C80A5FD00D52FDA /* headView.swift in Sources */,
 				FADC70092C7DDF4B009DF471 /* HeaderView.swift in Sources */,
 				FAAFD7BC2C8097D100D52FDA /* ausbildungView.swift in Sources */,
 				FAAFD7B82C80951C00D52FDA /* persDataView.swift in Sources */,
@@ -187,6 +194,7 @@
 				FADC700B2C7DE1C3009DF471 /* HeaderModel.swift in Sources */,
 				FADC70072C7DDC51009DF471 /* CVView.swift in Sources */,
 				FA8A3B952C7F466300DFF815 /* Berufserfahrung.swift in Sources */,
+				FAAFD7C02C80A8EA00D52FDA /* extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

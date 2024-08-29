@@ -15,37 +15,25 @@ struct HeaderViewMain: View {
 
     var body: some View {
         
-        // profilbild und Hintergrund fix
-        Group{
-            
-            ZStack{
-                
-                Image(cvHeader.bg)
-                Image(cvHeader.pic)
-                
-                    .frame(width: 210, height: 210)
-                    .overlay(Circle().stroke(Color(.white), lineWidth: 3))
-                    .offset(y:65)
-            }
-            .frame(maxWidth: .infinity, alignment: .top)
-            .edgesIgnoringSafeArea(.all)
-        }
+        headView(cvHeader: cvHeader)
         
         ScrollView() {
-            
+
             persDataView(cvHeader: cvHeader)
             berufErfahrungView(cvBeruf: cvBeruf)
             ausbildungView(cvAusbild: cvAusbild)
             
         } // end ScrollView
-        .frame(maxWidth: .infinity, alignment: .topLeading)
+        .frame(maxWidth: .infinity, alignment: .top)
         .edgesIgnoringSafeArea(.all)
           
     }
     
 }
 
-//#Preview {
+#Preview {
+    
+    CVView()
 //    HeaderViewMain(
 //        cvHeader: CVHeader(bg: "bg1",
 //                           pic: "profilbild",
@@ -79,4 +67,4 @@ struct HeaderViewMain: View {
 //                    Ausbildung(name: "Bachelor of Science in Betriebswirtschaftslehre",
 //                               ort: "Hochschule Musterstadt",
 //                               vonJahr: 2022, bisJahr: 2024)])
-//}
+}

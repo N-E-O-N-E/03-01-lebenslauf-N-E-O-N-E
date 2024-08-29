@@ -12,10 +12,28 @@ struct persDataView: View {
 
     var body: some View {
         
-        Text("\(cvHeader.CVtitel)")
-            .font(.title)
-            .bold()
-            .frame(width: 350.0, height: 50.0)
+        HStack(alignment: .center) {
+            Text("\(cvHeader.CVtitel)")
+                .font(.title)
+                .bold()
+                .padding(.leading, 22.0)
+                .frame(width: 300.0, height: 50.0, alignment: .leading)
+               
+            
+            
+            Button(action: {
+                print("E-Mail an Kontakt versenden...")
+            }, label: {
+                Image(systemName: "envelope.fill")
+                    .mailButtonStyle()
+            })
+            .padding(.trailing, 21.0)
+            
+            
+        }
+        .frame(width: .infinity)
+        
+        
             
         ZStack(alignment: .leading) {
             Image(systemName: "person.circle.fill")

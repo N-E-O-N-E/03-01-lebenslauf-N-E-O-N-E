@@ -8,6 +8,7 @@
 import Foundation
 
 struct Berufserfahrung {
+    var id = UUID()
     let titel: String
     let ort: String
     let vonJahr: Int
