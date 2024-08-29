@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CVHeader {
     
+    var bg: String
     var pic: String
     let CVtitel: String
     

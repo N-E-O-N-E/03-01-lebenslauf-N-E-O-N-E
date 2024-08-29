@@ -14,37 +14,25 @@ struct CVHeaderView2: View {
     let cvAusbild: [Ausbildung]
     
     var body: some View {
-
-        //Color(red: 0.35, green: 0.62, blue: 0.6)
         
         ZStack{
             
+            Image(cvHeader.bg)
             Image(cvHeader.pic)
-            
-            Image("profilbild")
                 .frame(width: 210, height: 210)
                 .overlay(Circle().stroke(Color(.white), lineWidth: 3))
                 .offset(y:65)
                 
         }
         .frame(maxWidth: .infinity, alignment: .top)
-        .padding(.top, -1)
-        .padding(.bottom, -10)
         .edgesIgnoringSafeArea(.all)
-        
         
         Text("\(cvHeader.CVtitel)")
             .font(.title).bold()
             .padding(.bottom, 0)
         
-        Divider()
-            
-                
-        ScrollView {
-                
-        
-                
-                
+        ScrollView() {
+
             ZStack {
                     Text("Persönliche Daten")
                         .font(.title3).bold()
@@ -54,131 +42,200 @@ struct CVHeaderView2: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(Color(red: 0.1, green: 0.2, blue: 0.3).opacity(0.15))
                 
-                
-                
-                
-                VStack(alignment: .leading) {
+            // Gruppe: Persönliche Daten
+            Group {
+                HStack(alignment: .top) {
                     
-                    // Statt Spacing einfach mal ein Frame mit fixer Breite einsetzen!
-                    // ----------------------------------------------------------------------------
+                    Text("Vorname:")
+                        .frame(width: 110, alignment: .trailing)
+                        .padding(1)
                     
-                    
-                    HStack {
-                        Text("Vorname:")
-                            .padding(1)
-                        Spacer().frame(width: 50)
+                    VStack(alignment: .leading) {
                         
-                        Text("\(cvHeader.vorname)")
-                    }
-                    
-                    HStack {
-                        Text("Nachname:")
+                        Text(cvHeader.vorname)
+                            .frame(width: 200, alignment: .leading)
                             .padding(1)
-                        Spacer().frame(width: 36)
-                        Text("\(cvHeader.nachname)")
                     }
-                    
-                    HStack {
-                        Text("Strasse, Nr:")
-                            .padding(1)
-                        Spacer().frame(width: 34)
-                        Text("\(cvHeader.strasseNr)")
-                    }
-                    
-                    HStack {
-                        Text("PLZ, Ort:")
-                            .padding(1)
-                        Spacer().frame(width: 54)
-                        Text("\(cvHeader.plzOrt)")
-                    }
-                    
-                    HStack {
-                        Text("E-Mail:")
-                            .padding(1)
-                        Spacer().frame(width: 70)
-                        Text("\(cvHeader.eMail)")
-                    }
-                    
-                    HStack {
-                        Text("Telefon:")
-                            .padding(1)
-                        Spacer().frame(width: 63)
-                        Text("\(cvHeader.telefon)")
-                    }
-                    
-                    HStack {
-                        Text("Geburtsort:")
-                            .padding(1)
-                        Spacer().frame(width: 36)
-                        Text("\(cvHeader.gebOrt)")
-                    }
-                    HStack {
-                        Text("Familienstand:")
-                            .padding(1)
-                        Spacer().frame(width: 14)
-                        Text("\(cvHeader.familienstand)")
-                    }
-                    
-                    
-                    
                 }
                 
+                
+                HStack(alignment: .top) {
+                    
+                    Text("Nachname:")
+                        .frame(width: 110, alignment: .trailing)
+                        .padding(1)
+                    
+                    VStack(alignment: .leading) {
+                        
+                        Text(cvHeader.nachname)
+                            .frame(width: 200, alignment: .leading)
+                            .padding(1)
+                    }
+                }
+                
+                HStack(alignment: .top) {
+                    
+                    Text("Strasse,Nr.:")
+                        .frame(width: 110, alignment: .trailing)
+                        .padding(1)
+                    
+                    VStack(alignment: .leading) {
+                        
+                        Text(cvHeader.strasseNr)
+                            .frame(width: 200, alignment: .leading)
+                            .padding(1)
+                    }
+                }
+                
+                HStack(alignment: .top) {
+                    
+                    Text("PLZ, Ort:")
+                        .frame(width: 110, alignment: .trailing)
+                        .padding(1)
+                    
+                    VStack(alignment: .leading) {
+                        
+                        Text(cvHeader.plzOrt)
+                            .frame(width: 200, alignment: .leading)
+                            .padding(1)
+                    }
+                }
+                
+                HStack(alignment: .top) {
+                    
+                    Text("E-Mail:")
+                        .frame(width: 110, alignment: .trailing)
+                        .padding(1)
+                    
+                    VStack(alignment: .leading) {
+                        
+                        Text(cvHeader.eMail)
+                            .frame(width: 200, alignment: .leading)
+                            .padding(1)
+                    }
+                }
+                
+                HStack(alignment: .top) {
+                    
+                    Text("Telefon-Nr:")
+                        .frame(width: 110, alignment: .trailing)
+                        .padding(1)
+                    
+                    VStack(alignment: .leading) {
+                        
+                        Text(cvHeader.telefon)
+                            .frame(width: 200, alignment: .leading)
+                            .padding(1)
+                    }
+                }
+                
+                HStack(alignment: .top) {
+                    
+                    Text("Geburtsort:")
+                        .frame(width: 110, alignment: .trailing)
+                        .padding(1)
+                    
+                    VStack(alignment: .leading) {
+                        
+                        Text(cvHeader.gebOrt)
+                            .frame(width: 200, alignment: .leading)
+                            .padding(1)
+                    }
+                }
+                
+                HStack(alignment: .top) {
+                    
+                    Text("Familienstand:")
+                        .frame(width: 110, alignment: .trailing)
+                        .padding(1)
+                    
+                    VStack(alignment: .leading) {
+                        
+                        Text(cvHeader.familienstand)
+                            .frame(width: 200, alignment: .leading)
+                            .padding(1)
+                    }
+                }
+                
+                
                 Spacer(minLength: 30)
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
+}
+                          
                 ZStack {
                     Text("Berufserfahrung")
                         .font(.title3).bold()
                         .padding(.horizontal)
-                    
-                    
                 } .frame(maxWidth: .infinity, alignment: .leading)
                     .background(Color(red: 0.1, green: 0.2, blue: 0.3).opacity(0.15))
                 
                 
-                VStack(alignment: .leading) {
+            // Berufserfahrung
+            Group {
+                
+                HStack(alignment: .top) {
+                    Text("\(String(cvBeruf[0].vonJahr)) - \(String(cvBeruf[0].bisJahr))")
+                        .frame(width: 110, alignment: .trailing)
+                        .padding(1)
                     
-                    // Statt Spacing einfach mal ein Frame mit fixer Breite einsetzen!
-                    // ----------------------------------------------------------------------------
-                    
-                    
-                    HStack {
-                        Text("Jobtitel:")
-                            .padding(1)
-                        Spacer().frame(width: 20)
+                    VStack {
                         Text("\(cvBeruf[0].titel)")
-                    }
-                    
-                    HStack {
-                        Text("Firma:")
+                            .frame(width: 260, alignment: .leading)
                             .padding(1)
-                        Spacer().frame(width: 34)
                         Text("\(cvBeruf[0].ort)")
+                            .frame(width: 260, alignment: .leading)
+                            .padding(1)
                     }
-                    
-                    
                 }
                 
-                Spacer(minLength: 30)
+                HStack(alignment: .top) {
+                    Text("\(String(cvBeruf[1].vonJahr)) - \(String(cvBeruf[1].bisJahr))")
+                        .frame(width: 110, alignment: .trailing)
+                        .padding(1)
+                    
+                    VStack {
+                        Text("\(cvBeruf[1].titel)")
+                            .frame(width: 260, alignment: .leading)
+                            .padding(1)
+                        Text("\(cvBeruf[1].ort)")
+                            .frame(width: 260, alignment: .leading)
+                            .padding(1)
+                    }
+                }
                 
+                HStack(alignment: .top) {
+                    Text("\(String(cvBeruf[2].vonJahr)) - \(String(cvBeruf[2].bisJahr))")
+                        .frame(width: 110, alignment: .trailing)
+                        .padding(1)
+                    
+                    VStack {
+                        Text("\(cvBeruf[2].titel)")
+                            .frame(width: 260, alignment: .leading)
+                            .padding(1)
+                        Text("\(cvBeruf[2].ort)")
+                            .frame(width: 260, alignment: .leading)
+                            .padding(1)
+                    }
+                }
+                
+                HStack(alignment: .top) {
+                    Text("\(String(cvBeruf[3].vonJahr)) - \(String(cvBeruf[3].bisJahr))")
+                        .frame(width: 110, alignment: .trailing)
+                        .padding(1)
+                    
+                    VStack {
+                        Text("\(cvBeruf[3].titel)")
+                            .frame(width: 260, alignment: .leading)
+                            .padding(1)
+                        Text("\(cvBeruf[3].ort)")
+                            .frame(width: 260, alignment: .leading)
+                            .padding(1)
+                    }
+                }
+                
+            }
+
             
-            
-            
-            
-            
+        Spacer(minLength: 30)
                 
             
                 ZStack {
@@ -186,34 +243,28 @@ struct CVHeaderView2: View {
                         .font(.title3).bold()
                         .padding(.horizontal)
                     
-                    
                 } .frame(maxWidth: .infinity, alignment: .leading)
                     .background(Color(red: 0.1, green: 0.2, blue: 0.3).opacity(0.15))
                 
                 
-                VStack(alignment: .leading) {
+                HStack(alignment: .top) {
+                    Text("\(String(cvAusbild[3].vonJahr)) - \(String(cvAusbild[3].bisJahr))")
+                        .frame(width: 110, alignment: .trailing)
+                        .padding(1)
                     
-                    // Statt Spacing einfach mal ein Frame mit fixer Breite einsetzen!
-                    // ----------------------------------------------------------------------------
-                    
-                    
-                    HStack {
-                        Text("Abschluss:")
+                    VStack {
+                        Text("\(cvAusbild[3].name)")
+                            .frame(width: 260, alignment: .leading)
                             .padding(1)
-                        Spacer().frame(width: 20)
-                        
-                        Text("\(cvAusbild[0].name)")
-                    }
-                    
-                    HStack {
-                        Text("Institut:")
+                        Text("\(cvAusbild[3].ort)")
+                            .frame(width: 260, alignment: .leading)
                             .padding(1)
-                        Spacer().frame(width: 45)
-                        Text("\(cvAusbild[0].ort)")
                     }
-                    
-                    
                 }
+                
+                    
+                    
+                
                 
             }
           
@@ -225,7 +276,8 @@ struct CVHeaderView2: View {
 
 #Preview {
     CVHeaderView2(
-        cvHeader: CVHeader(pic: "bg1",
+        cvHeader: CVHeader(bg: "bg1",
+                           pic: "profilbild",
                            CVtitel: "Max Mustermann",
                            headline: "Persönliche Daten",
                            vorname: "Max",

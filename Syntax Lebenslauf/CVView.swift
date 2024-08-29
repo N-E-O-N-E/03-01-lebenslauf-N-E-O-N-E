@@ -9,7 +9,8 @@ import SwiftUI
 struct CVView: View {
     var body: some View {
         
-        let pers1 = CVHeader(pic: "bg1", 
+        let pers1 = CVHeader(bg: "bg1",
+                             pic: "profilbild",
                              CVtitel: "Max Mustermann",
                              headline: "Persönliche Daten",
                              vorname: "Max",
