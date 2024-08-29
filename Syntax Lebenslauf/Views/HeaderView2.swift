@@ -33,14 +33,17 @@ struct CVHeaderView2: View {
         
         ScrollView() {
 
-            ZStack {
+            ZStack(alignment: .leading) {
+                    Image(systemName: "person.circle.fill")
+                    .padding(.horizontal, 10)
+                
                     Text("Persönliche Daten")
                         .font(.title3).bold()
-                        .padding(.horizontal)
+                        .padding(.horizontal, 40)
                         
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .background(Color(red: 0.1, green: 0.2, blue: 0.3).opacity(0.15))
+                .background(Color(red: 0.2, green: 0.6, blue: 0.5).opacity(0.2))
                 
             // Gruppe: Persönliche Daten
             Group {
@@ -161,12 +164,15 @@ struct CVHeaderView2: View {
                 Spacer(minLength: 30)
 }
                           
-                ZStack {
+                ZStack(alignment: .leading) {
+                    Image(systemName: "hammer.fill")
+                    .padding(.horizontal, 10)
+                    
                     Text("Berufserfahrung")
                         .font(.title3).bold()
-                        .padding(.horizontal)
+                        .padding(.horizontal, 40)
                 } .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Color(red: 0.1, green: 0.2, blue: 0.3).opacity(0.15))
+                .background(Color(red: 0.2, green: 0.6, blue: 0.5).opacity(0.2))
                 
                 
             // Berufserfahrung
@@ -181,9 +187,11 @@ struct CVHeaderView2: View {
                         Text("\(cvBeruf[0].titel)")
                             .frame(width: 260, alignment: .leading)
                             .padding(1)
+                            .bold()
                         Text("\(cvBeruf[0].ort)")
                             .frame(width: 260, alignment: .leading)
                             .padding(1)
+                            .italic()
                     }
                 }
                 
@@ -196,9 +204,11 @@ struct CVHeaderView2: View {
                         Text("\(cvBeruf[1].titel)")
                             .frame(width: 260, alignment: .leading)
                             .padding(1)
+                            .bold()
                         Text("\(cvBeruf[1].ort)")
                             .frame(width: 260, alignment: .leading)
                             .padding(1)
+                            .italic()
                     }
                 }
                 
@@ -211,9 +221,11 @@ struct CVHeaderView2: View {
                         Text("\(cvBeruf[2].titel)")
                             .frame(width: 260, alignment: .leading)
                             .padding(1)
+                            .bold()
                         Text("\(cvBeruf[2].ort)")
                             .frame(width: 260, alignment: .leading)
                             .padding(1)
+                            .italic()
                     }
                 }
                 
@@ -226,9 +238,11 @@ struct CVHeaderView2: View {
                         Text("\(cvBeruf[3].titel)")
                             .frame(width: 260, alignment: .leading)
                             .padding(1)
+                            .bold()
                         Text("\(cvBeruf[3].ort)")
                             .frame(width: 260, alignment: .leading)
                             .padding(1)
+                            .italic()
                     }
                 }
                 
@@ -238,33 +252,55 @@ struct CVHeaderView2: View {
         Spacer(minLength: 30)
                 
             
-                ZStack {
+            ZStack(alignment: .leading) {
+                Image(systemName: "graduationcap.fill")
+                .padding(.horizontal, 10)
+                
                     Text("Ausbildung")
                         .font(.title3).bold()
-                        .padding(.horizontal)
+                        .padding(.horizontal, 40)
                     
                 } .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Color(red: 0.1, green: 0.2, blue: 0.3).opacity(0.15))
+                .background(Color(red: 0.2, green: 0.6, blue: 0.5).opacity(0.2))
                 
                 
                 HStack(alignment: .top) {
-                    Text("\(String(cvAusbild[3].vonJahr)) - \(String(cvAusbild[3].bisJahr))")
+                    Text("\(String(cvAusbild[0].vonJahr)) - \(String(cvAusbild[0].bisJahr))")
                         .frame(width: 110, alignment: .trailing)
                         .padding(1)
                     
                     VStack {
-                        Text("\(cvAusbild[3].name)")
+                        Text("\(cvAusbild[0].name)")
                             .frame(width: 260, alignment: .leading)
                             .padding(1)
-                        Text("\(cvAusbild[3].ort)")
+                            .bold()
+                        Text("\(cvAusbild[0].ort)")
                             .frame(width: 260, alignment: .leading)
                             .padding(1)
+                            .italic()
+                            
+                    }
+                }
+            
+                HStack(alignment: .top) {
+                    Text("\(String(cvAusbild[1].vonJahr)) - \(String(cvAusbild[1].bisJahr))")
+                        .frame(width: 110, alignment: .trailing)
+                        .padding(1)
+                    
+                    VStack {
+                        Text("\(cvAusbild[1].name)")
+                            .frame(width: 260, alignment: .leading)
+                            .padding(1)
+                            .bold()
+                        Text("\(cvAusbild[1].ort)")
+                            .frame(width: 260, alignment: .leading)
+                            .padding(1)
+                            .italic()
+                            
                     }
                 }
                 
-                    
-                    
-                
+            
                 
             }
           
