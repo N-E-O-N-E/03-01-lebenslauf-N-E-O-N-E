@@ -17,9 +17,7 @@ struct persDataView: View {
                 .font(.title)
                 .bold()
                 .padding(.leading, 22.0)
-                .frame(width: 300.0, height: 50.0, alignment: .leading)
-               
-            
+                .frame(width: 300.0, height: 40.0, alignment: .leading)
             
             Button(action: {
                 print("E-Mail an Kontakt versenden...")
@@ -32,6 +30,7 @@ struct persDataView: View {
             
         }
         .frame(width: .infinity)
+        .padding(.top, 20)
         
         
             
